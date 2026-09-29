@@ -1,1 +1,20 @@
+5 Rf (Requisitos Funcionais) de Deliverys:
+1 - Identificação do Usuário - E-mail ou Telefone
+2 - Criação de cadastro obrigatório, com validação do endereço, cruzando com CEP informado.
+3 - Catalogo de Lojas separadas, cada uma com seu "cardápio"
+4 - Adição dos produtos no Carrinho, podendo adicionar vários, validando a soma.
+5 - Calculo da Taxa de Entrega ou escolha a "retirar"
+Adicionais:
+6 - Pagamento por Cartão de Crédito ou Pix;
 
+Testes de Quebra:
+1 - Inserção de e-mail ou telefone de terceiro/incorreto, informando código de verificação aleatório.
+2 - Cadastro incompleto, sem informar CPF, ou CPF Incorreto. CEP inválido na criação, ou diferente do endereço (cidade ou bairo) da o real.
+3 - Adicionar produto de uma loja, retornar e tentar incluir produto de outra loja para tentar usar o mesmo "frete" ou se ocorre conflito nos carrinhos;
+4 - Selecionar "retirar" calcular total, e mudar para entrega a fim de tentar evitar a taxa;
+5 - Incluir uma quantidade significativa de um produto, maior que o estoque ou capacidade da loja, por exemplo, 99 latinhas de Coca Cola, quando na loja só tem 20 em estoque.
+6 - Incluri dados inválidos do cartão de crédito, e verificar se o pedido é completado mesmo sem o pagamento
+7 - Simular conclusão do pedido sem efetivamente realizar o pix para a loja;
+8 - Incluir endereço de outra cidade, que inviabiliza a entrega pelo motoboy;
+9 - Validar efetivamente a Taxa cobrada pela entrega X distância para avaliar se a precificação esta correta.
+10 - Tentar alterar o endereço de entrega depois do pedido feito e cobrado a taxa para tentar burlar o custo real
